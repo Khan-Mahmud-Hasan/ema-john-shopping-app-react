@@ -3,6 +3,7 @@ import Cart from '../Cart/Cart';
 import { useLoaderData } from 'react-router-dom';
 import OrderReview from '../OrderReview/OrderReview';
 import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
+import { Link } from 'react-router-dom';
 const Orders = () => {
     const savedCart = useLoaderData();
     const [cart, setCart] = useState(savedCart)
@@ -34,7 +35,11 @@ const Orders = () => {
             <div className="cart-container">
                 <Cart cart={cart}
                     handleClearCart={handleClearCart}
-                ></Cart>
+                >
+                    <Link className='proceed-link' to="/checkout">
+                        <button className='btn-proceed'>Proceed Checkout</button>
+                    </Link>
+                </Cart>
             </div>
         </div>
     );
