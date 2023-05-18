@@ -17,3 +17,8 @@ nav.header a {
 nav.header a:hover {
     color: rgb(250, 167, 13);
 }
+
+.text-color {
+    color: white;
+
+}
